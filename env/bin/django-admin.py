@@ -1,4 +1,4 @@
-#!/Users/admin/Desktop/Developer/Cowculator/cowculator/env/bin/python3
+#!/Users/admin/Desktop/Developer/Personal Website/MyWebsite/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

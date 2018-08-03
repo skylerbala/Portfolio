@@ -1,5 +1,6 @@
-#!/Users/admin/Desktop/Developer/Cowculator/cowculator/env/bin/python3
-
+#!/bin/sh
+'''exec' "/Users/admin/Desktop/Developer/Personal Website/MyWebsite/env/bin/python3" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
