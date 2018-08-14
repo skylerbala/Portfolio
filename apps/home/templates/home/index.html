@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block main %}
+
+  <div id='about'class='card-panel blue hoverable'>
+    {% include 'home/about.html' %}
+  </div>
+
+  <div id='skills' class='card-panel blue hoverable'>
+    {% include 'home/skills.html' %}
+  </div>
+  
+  <div id='experience' class='card-panel blue hoverable'>
+    {% include 'home/work-experience.html' %}
+  </div>
+
+  <div id='contact' class='card-panel blue hoverable'>
+    {% include 'home/contact.html' %}
+  </div>
+
+  
+  
+{% endblock %}

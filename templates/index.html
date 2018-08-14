@@ -7,27 +7,45 @@
     <title>Welcome!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/e10086b709.css" media="all" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static '/frameworks/materialize5/css/materialize.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
   </head>
   <body>
     <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
+      <div class="nav-wrapper blue">
+        <a href="#!" class="brand-logo center">Skyler Bala</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html"></a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-          # Dropdown
-          <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-          </ul>
+          <li><a href='#about'>About</a></li>
+          <li><a href='#skills'>Skills</a></li>
+          <li><a href='#experience'>Experience</a></li>
+          <li><a href='#projects'>Projects</a></li>
+          <li><a href='#education'>Education</a></li>
+          <li><a href='#contact'>Contact</a></li>
         </ul>
       </div>
     </nav>
 
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href='#about'>About</a></li>
+      <li><a href='#skills'>Skills</a></li>
+      <li><a href='#experience'>Experience</a></li>
+      <li><a href='#projects'>Projects</a></li>
+      <li><a href='#education'>Education</a></li>
+      <li><a href='#contact'>Contact</a></li>
+    </ul>
+
+    <main>
+      <div class='container'>
+        {% block main %}
+        {% endblock %}
+      </div> 
+    </main>
+
+    <div class="fixed-action-btn">
+      <a class="btn-large blue darken-3 waves-effect waves-dark pulse">CONTACT</a>
+    </div>
 
 
     <script src="{% static '/frameworks/jquery-3.3.1.min.js' %}"></script>
