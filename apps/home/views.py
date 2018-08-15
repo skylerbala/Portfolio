@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib import messages
+from django.core.mail import send_mail
 from .models.jobs import Job
 from .models.skills import Skill
 from .models.projects import Project
