@@ -48,6 +48,10 @@ body {
   color: #FFFFFF;
 }
 
-input {
+input, textarea {
   color: white;
+}
+
+.modal {
+  color: black;
 }

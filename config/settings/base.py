@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'config.urls'
+ROOT_URLCONF = 'apps.api.urls'
 
 TEMPLATES = [
     {
@@ -141,11 +141,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(APP_DIR, 'static'),
 ]
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
 
 MEDIA_URL = '/media/'
 

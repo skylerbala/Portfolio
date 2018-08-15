@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
-});
-
-// Or with jQuery
-
 $(document).ready(function(){
   $('.sidenav').sidenav();
+  M.AutoInit();
+
+  $('.form-main').submit(function (e) {
+    e.preventDefault();
+
+    var formData = $(this).serialize();
+
+  });
 });
-    
