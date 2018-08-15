@@ -12,20 +12,143 @@
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper blue">
-        <a href="#!" class="brand-logo center">Skyler Bala</a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href='#about'>About</a></li>
-          <li><a href='#skills'>Skills</a></li>
-          <li><a href='#experience'>Experience</a></li>
-          <li><a href='#projects'>Projects</a></li>
-          <li><a href='#education'>Education</a></li>
-          <li><a href='#contact'>Contact</a></li>
-        </ul>
+
+    <div id="about-nav" class="block beige lighten-1">
+      <nav class="pushpin-demo-nav" data-target='about-nav'>
+        <div class="nav-wrapper blue">
+          <a href="#about" class="brand-logo left">About</a>
+          <a href="#!" class="brand-logo center">Skyler Bala</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href='#about'>About</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#experience'>Experience</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class='container container-main'>
+        {% block about %}
+        {% endblock %}
       </div>
-    </nav>
+    </div>
+
+    <div id="skills-nav" class="block red lighten-1">
+      <nav class="pushpin-demo-nav" data-target='skills-nav'>
+        <div class="nav-wrapper blue">
+          <a href="#about" class="brand-logo left">Skills</a>
+          <a href="#!" class="brand-logo center">Skyler Bala</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href='#about'>About</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#experience'>Experience</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class='container container-main'>
+        {% block skills %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div id="experience-nav" class="block red lighten-1">
+      <nav class="pushpin-demo-nav" data-target='experience-nav'>
+        <div class="nav-wrapper blue">
+          <a href="#about" class="brand-logo left">Work Experience</a>
+          <a href="#!" class="brand-logo center">Skyler Bala</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href='#about'>About</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#experience'>Experience</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class='container container-main'>
+        {% block experience %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div id="projects-nav" class="block red lighten-1">
+      <nav class="pushpin-demo-nav" data-target='projects-nav'>
+        <div class="nav-wrapper blue">
+          <a href="#about" class="brand-logo left">Projects</a>
+          <a href="#!" class="brand-logo center">Skyler Bala</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href='#about'>About</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#experience'>Experience</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class='container container-main'>
+        {% block projects %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div id="education-nav" class="block red lighten-1">
+      <nav class="pushpin-demo-nav" data-target='education-nav'>
+        <div class="nav-wrapper blue">
+          <a href="#about" class="brand-logo left">Education</a>
+          <a href="#!" class="brand-logo center">Skyler Bala</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href='#about'>About</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#experience'>Experience</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class='container container-main'>
+        {% block education %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div id="contact-nav" class="block red lighten-1">
+      <nav class="pushpin-demo-nav" data-target='contact-nav'>
+        <div class="nav-wrapper blue">
+          <a href="#about" class="brand-logo left">Contact</a>
+          <a href="#!" class="brand-logo center">Skyler Bala</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href='#about'>About</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#experience'>Experience</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class='container container-main'>
+        {% block contact %}
+        {% endblock %}
+      </div>
+    </div>
 
     <ul class="sidenav" id="mobile-nav">
       <li><a href='#about'>About</a></li>
@@ -35,13 +158,6 @@
       <li><a href='#education'>Education</a></li>
       <li><a href='#contact'>Contact</a></li>
     </ul>
-
-    <main>
-      <div class='container'>
-        {% block main %}
-        {% endblock %}
-      </div> 
-    </main>
 
     <div class="fixed-action-btn">
       <a class="btn-large blue darken-3 waves-effect waves-dark pulse">CONTACT</a>
