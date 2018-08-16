@@ -1,6 +1,6 @@
 #self-picture {
-  width: 40%;
-  height: 40%;
+  width: 325px;
+  height: 325px;
   border: 10px solid #FFFFFF;
   background: center;
 }
@@ -17,7 +17,7 @@ body {
 .divider {
   background-color: white;
   height: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 /* label color */
@@ -48,10 +48,32 @@ body {
   color: #FFFFFF;
 }
 
-input, textarea {
+input, textarea, a {
   color: white;
 }
 
 .modal {
   color: black;
 }
+
+.beige {
+  background-color: #f5f5dc
+}
+
+.card-panel-main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.table-of-contents a:hover {
+  border-left: 2px solid #2196F3;
+}
+
+.table-of-contents a.active:hover {
+  border-left: 7px solid #2196F3;
+}
+
+.table-of-contents a.active {
+  border-left: 7px solid #2196F3;
+}
+

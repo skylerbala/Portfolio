@@ -1,23 +1,27 @@
 {% extends 'index.html' %}
 {% block main %}
 
-  <div id='about'class='card-panel blue hoverable'>
+  <div id='about'class='card-panel blue hoverable scrollspy card-panel-main'>
     {% include 'home/about.html' %}
   </div>
 
-  <div id='skills' class='card-panel blue hoverable'>
+  <div id='skills' class='card-panel blue hoverable scrollspy card-panel-main'>
     {% include 'home/skills.html' %}
   </div>
   
-  <div id='experience' class='card-panel blue hoverable'>
+  <div id='experience' class='card-panel blue hoverable scrollspy card-panel-main'>
     {% include 'home/work-experience.html' %}
   </div>
   
-  <div id='projects' class='card-panel blue hoverable'>
+  <div id='projects' class='card-panel blue hoverable scrollspy card-panel-main'>
     {% include 'home/projects.html' %}
   </div>
 
-  <div id='contact' class='card-panel blue hoverable'>
+  <div id='education' class='card-panel blue hoverable scrollspy card-panel-main'>
+    {% include 'home/education.html' %}
+  </div>
+
+  <div id='contact' class='card-panel blue hoverable scrollspy card-panel-main'>
     {% include 'home/contact.html' %}
   </div>
 
