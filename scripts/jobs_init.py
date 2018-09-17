@@ -1,40 +1,59 @@
-from apps.home.models.jobs import Job
+from apps.home.models.job import Job
 from datetime import date
 
 jobs = [
-  {
-    "company": "Unitrans",
-    "position": "Web Developer",
-    "location": "Davis, CA",
-    "description": "•  Design and implement novel web solutions on Unitrans’ administrative website to streamline Unitrans’ administrative tasks•  Work closely with Unitrans managers to better understand Unitrans’ Web Suite needs•  Languages/ APIs: Django, JavaScript, HTML, CSS, PostgreSQL, jQuery, Python",
-    "start_date": date(2018, 6, 1),
-    "end_date": "",
-    "company_image": '/static/images/company/' + "unitrans.png"
-  },
-  {
-    "company": "The Little Green Coupon Machine",
-    "position": "iOS Engineer",
-    "location": "Davis, CA",
-    "description": "•	Revamped existing coupon aggregator iOS app, The Little Green App – enables users to discover and access deals from local Davis businesses•	Resolved issues with deprecated software by re-writing app with modern frameworks/ libraries•	Identified and Troubleshot UX issues; Enhanced graphic UI elements•	Languages/ APIs: Swift",
-    "start_date": date(2017, 8, 1),
-    "end_date": date(2017, 10, 1),
-    "company_image":'/static/images/company/' + "lgcm.png"
-  },
-  {
-    "company": "Mathnasium",
-    "position": "Mathematics Instructor",
-    "location": "Mountain View, CA",
-    "description": "•	Tutored students grades 8th – 12th one-on-one in math subjects from Algebra to Calculus•	Developed customized learning plans to suit needs of each student",
-    "start_date": date(2015, 8, 1),
-    "end_date": date(2016, 4, 1),
-    "company_image": '/static/images/company/' + "mathnasium.png"
-  },
+ {
+   "A": "Unitrans",
+   "B": "Web Developer",
+   "C": "Davis, CA",
+   "D": "• Design and implement novel solutions on Unitrans’ administrative/ human capital management software<br />• Work closely with Unitrans managers to better understand Unitrans’ web suite needs<br />• Languages/ APIs: Django, JavaScript, HTML, CSS, PostgreSQL, jQuery, Python",
+   "E": "2018-06-01",
+   "F": "None",
+   "G": "/static/images/jobs/unitrans.png"
+ },
+ {
+   "A": "UC Davis Department of Entomology",
+   "B": "Mobile App/ Web Developer ",
+   "C": "Davis, CA",
+   "D": "•\tDesign a mobile app (SmartSpray) that provides farmers spray coverage data as well as analytical instruments to reduce pesticide resistance development and optimize pesticide application costs<br />•\tDesigned image color quantization algorithm to measure pesticide coverage<br />•\tLanguages/ APIs: Swift, Core Graphics",
+   "E": "2018-06-01",
+   "F": "None",
+   "G": "/static/images/jobs/ucdavis.png"
+ },
+ {
+   "A": "The Little Green Coupon Machine",
+   "B": "iOS Engineer",
+   "C": "Davis, CA",
+   "D": "•\tRevamped existing coupon aggregator iOS app, The Little Green App – enables users to discover and access deals from local Davis businesses <br />•\tResolved issues with deprecated software by re-writing app with modern frameworks/ libraries<br />•\tIdentified and Troubleshot UX issues; Enhanced graphic UI elements<br />•\tLanguages/ APIs: Swift, ",
+   "E": "2017-08-01",
+   "F": "2017-10-01",
+   "G": "/static/images/jobs/lgcm.png"
+ },
+ {
+   "A": "Empoder",
+   "B": "Volunteer CS Curriculum Designer/Instructor",
+   "C": "Mountain View, CA",
+   "D": "•\tDesigned and taught 10-week computer science curriculum to underprivileged groups <br />•\t400+ Volunteer Hours<br />•\tAssisted organization in procuring $25,000 in grant money via Google Rise Award",
+   "E": "2016-06-01",
+   "F": "2016-07-01",
+   "G": "/static/images/jobs/empoder.png"
+ },
+ {
+   "A": "Mathnasium",
+   "B": "Mathematics Instructor",
+   "C": "Mountain View, CA",
+   "D": "•\tTutored students grades 8th – 12th one-on-one in math subjects from Algebra to Calculus<br />•\tDeveloped customized learning plans to suit needs of each student",
+   "E": "2015-08-01",
+   "F": "2016-04-01",
+   "G": "/static/images/jobs/mathnasium.png"
+ }
 ]
 
 def create_jobs():
   for j in jobs:
-    if j["end_date"] == "":
-      job_new = Job(company=j["company"], position=j["position"], location=j["location"], description=j["description"], start_date=j["start_date"], company_image=j["company_image"])
+    if j["F"] is "None":
+      new_job = Job(company=j["A"], position=j["B"], location=j["C"], description=j["D"], start_date=j["E"], end_date=None, company_image=j["G"])
+      new_job.save()
     else:
-      job_new = Job(company=j["company"], position=j["position"], location=j["location"], description=j["description"], start_date=j["start_date"], end_date=j["end_date"], company_image=j["company_image"])
-    job_new.save()
+      new_job = Job(company=j["A"], position=j["B"], location=j["C"], description=j["D"], start_date=j["E"], end_date=j["F"], company_image=j["G"])
+      new_job.save()

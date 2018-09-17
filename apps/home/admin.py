@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models.contacts import Contact
-from .models.jobs import Job
-from .models.projects import Project
-from .models.skills import Skill
+from .models.contact import Contact
+from .models.job import Job
+from .models.project import Project
+from .models.skill import Skill
 from .models.volunteer import Volunteer
 
 

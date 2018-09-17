@@ -3,11 +3,11 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.views import View
 from django.http import HttpResponse
-from .models.jobs import Job
-from .models.skills import Skill
-from .models.projects import Project
+from .models.job import Job
+from .models.skill import Skill
+from .models.project import Project
 from .models.volunteer import Volunteer
-from .models.contacts import Contact
+from .models.contact import Contact
 from .forms import ContactForm
 
 class Index(View):
@@ -15,10 +15,10 @@ class Index(View):
   template_name = 'home/index.html'
 
   def get(self, request):
-    jobs = Job.objects.all()
+    jobs = Job.objects.order_by('start_date').reverse().all()
     skills = Skill.objects.all()
-    projects = Project.objects.all()
-    volunteer = Volunteer.objects.all()
+    projects = Project.objects.order_by('start_date').reverse().all()
+    volunteer = Volunteer.objects.order_by('start_date').reverse().all()
     contacts = Contact.objects.all()
     
     context = {
