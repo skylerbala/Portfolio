@@ -26,11 +26,10 @@ ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 APP_DIR = os.path.join(ROOT_DIR, 'apps')
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'k*rs$tsy8t68o&dq5m6bd18fctur!7s0w&@ev)0q!ob_06q2)u'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'k*rs$tsy8t68o&dq5m6bd18fctur!7s0w&@ev)0q!ob_06q2)u')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 ALLOWED_HOSTS = []
 
 
