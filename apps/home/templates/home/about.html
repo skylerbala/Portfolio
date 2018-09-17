@@ -1,3 +1,4 @@
+{% load static %}
 <div class='center-align'>
   <img id='self-picture' class='responsive-img circle' src='static/images/personal/self.png'/>
   <h1 class="card-title">Howdy!</h1>
@@ -10,6 +11,5 @@
 <h5>Whether you're an employer who sees a strong fit for a position on their team, a small business owner who need an app developer, a friend, or just someone with an interesting idea to share, I'd be more than happy to connect!</h5>
 
 <div style="display: flex; justify-content: space-around;">
-    <a style='width: 50%' class="waves-effect waves-light btn-large blue darken-3 pulse">Resume</a>
+    <a style='width: 50%' class="waves-effect waves-light btn-large blue darken-3 pulse" href="{% static 'documents/resume.pdf' %}">Resume</a>
 </div>
-

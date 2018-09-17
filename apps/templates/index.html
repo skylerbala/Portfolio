@@ -34,7 +34,7 @@
         {% block main %}
         {% endblock %}
       </div> 
-      <div class="hide-on-med-and-down" style='position: fixed; right: 60px; top: 85px;'>
+      <div class="hide-on-med-and-down" style='position: fixed; right: 1px; top: 85px;'>
         <ul class="section table-of-contents">
           <li><h5><a class='waves-effect waves-dark pulse' href='#about'>About</a></h5></li>
           <li><h5><a class='waves-effect waves-dark' href='#skills'>Skills</a></h5></li>
@@ -42,13 +42,13 @@
           <li><h5><a class='waves-effect waves-dark' href='#projects'>Projects</a></li>
           <li><h5><a class='waves-effect waves-dark' href='#education'>Education</a></h5></li>
           <li><h5><a class='waves-effect waves-dark' href='#contact'>Contact</a></h5></li>
-          <li><h5><a class='waves-effect waves-dark' href='#contact'>Resume</a></h5></li>
+          <li><h5><a class='waves-effect waves-dark' href="{% static 'documents/resume.pdf' %}">Resume</a></h5></li>
         </ul>
       </div>
     </main>
-
+  
     <script src="{% static '/frameworks/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static '/frameworks/materialize5/js/materialize.min.js' %}"></script>
+    <script src="{% static '/frameworks/materialize5/js/materialize.js' %}"></script>
     <script src="{% static '/js/index.js' %}"></script>
   </body>
 </html>
