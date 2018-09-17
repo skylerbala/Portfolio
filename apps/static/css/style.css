@@ -61,8 +61,10 @@ input, textarea, a {
 }
 
 .card-panel-main {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .table-of-contents a:hover {

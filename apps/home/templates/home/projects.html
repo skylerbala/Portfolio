@@ -1,30 +1,27 @@
-{% load static %}
 <h1 class="card-title center-align">Projects</h1>
 <div class='divider'></div>
 <div class="row">
-  <div class="card hoverable blue darken-3">
-    <div class="carousel">
-      <a class="carousel-item" href="#two!"><img src="{% static 'images/company/unitrans.png' %}"></a>
-      <a class="carousel-item" href="#two!"><img src="/static/images/images/unitrans.png"></a>
-      <a class="carousel-item" href="#two!"><img src="/static/images/images/unitrans.png"></a>
-      <a class="carousel-item" href="#two!"><img src="/static/images/images/unitrans.png"></a>
-      <a class="carousel-item" href="#two!"><img src="/static/images/images/unitrans.png"></a>
-    </div>
-  </div>
-    <div class="col m6 blue">
-      <div class="card hoverable blue darken-3">
-        <div class="card-image">
-          <img src="{{ job.company_image }}">
-          <a class="btn-floating halfway-fab waves-effect waves-light blue pulse"><i class="material-icons">thumb_up</i></a>
+  {% for project in projects %}
+  <div class="col m4 blue">
+    <div class="card hoverable blue darken-3">
+        <div class="carousel">
+          {% for i in "xx" %}
+            {% if project.project_image_1 or project.project_image_2 %}
+              <a class="carousel-item"><img src="{{ project.project_image_1 }}"></a>
+              {% if project.project_image_2 %}
+                <a class="carousel-item"><img src="{{ project.project_image_2 }}"></a>
+              {% endif %}
+            {% else %}
+              <p>No Images Available Currently</p>
+            {% endif %}
+          {% endfor %}
         </div>
         <div class="card-content">
-          <span class="card-title">{{ job.position }} at {{ job.company }}</span>
-          <p>{{ job.description|safe }}</p><span class="new badge" data-badge-caption="custom caption">4</span>
+          <span class="card-title" style="font-size: 30px;"><b>{{ project.name }}</b></span>
+          <p style="font-size: 20px;">{{ project.description }}</p>
+          <p style="margin-top: 20px;"><a href="{{ project.link }}">GitHub Repo Link</a></p>
         </div>
-          <div class="card-action">
-            <a id="project-link" href="#">Available on iOS and Android</a>
-          </div>
-      </div>
     </div>
+  </div>
+  {% endfor %}
 </div>
-https://api.github.com/users/skylerbala/repos

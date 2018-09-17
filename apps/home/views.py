@@ -17,7 +17,7 @@ class Index(View):
   def get(self, request):
     jobs = Job.objects.order_by('start_date').reverse().all()
     skills = Skill.objects.all()
-    projects = Project.objects.order_by('start_date').reverse().all()
+    projects = Project.objects.all()
     volunteer = Volunteer.objects.order_by('start_date').reverse().all()
     contacts = Contact.objects.all()
     
